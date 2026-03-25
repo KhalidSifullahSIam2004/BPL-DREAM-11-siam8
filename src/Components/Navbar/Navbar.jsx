@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react'
 
 
 
-const Navbar = () => {
+const Navbar = ({coin}) => {
 
   const [open, setOpen] = useState(false);
 
@@ -28,9 +28,8 @@ const Navbar = () => {
         <li className='text-[#131313B2] font-bold'><a href='/'>Home</a></li>
         <li className='text-[#131313B2] font-bold'><a href='/future'>Future</a></li>
         <li className='text-[#131313B2] font-bold'><a href='/teams'>Teams</a></li>
-        <li className='text-[#131313B2] font-bold'><a href='/teams'>Teams</a></li>
         <li className='text-[#131313B2] font-bold'><a href='/schedules'>Schedules</a></li>
-        <button className="flex justify-between items-center gap-2 font-semibold"> 0 coins <img src={Dollar1} /> </button> 
+        <button className="flex justify-between items-center gap-2 font-semibold"> {coin} coins <img src={Dollar1} /> </button> 
         </ul>
     }
         
@@ -48,7 +47,7 @@ const Navbar = () => {
         <li className='text-[#131313B2]'><a href='/teams'>Teams</a></li>
         <li className='text-[#131313B2]'><a href='/schedules'>Schedules</a></li>
     </ul>
-    <button className="flex justify-between items-center gap-2 font-semibold"> 0 coins <img src={Dollar1} /> </button>
+    <button className="flex justify-between items-center gap-2 font-semibold"> {coin} coins <img src={Dollar1} /> </button>
   </div>
 </div>
   )
