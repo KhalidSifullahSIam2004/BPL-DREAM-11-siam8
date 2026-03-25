@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "player": "Virat Kohli",
+    "image": "https://i.ibb.co.com/C3wzsB4C/kohli231007.jpg",
+    "country": "India",
+    "type": "Batsman",
+    "rating": 95,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium",
+    "price": 120000
+  },
+  {
+    "id": 2,
+    "player": "Babar Azam",
+    "image": "https://example.com/babar-azam.jpg",
+    "country": "Pakistan",
+    "type": "Batsman",
+    "rating": 93,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "price": 110000
+  },
+  {
+    "id": 3,
+    "player": "Shakib Al Hasan",
+    "image": "https://example.com/shakib.jpg",
+    "country": "Bangladesh",
+    "type": "All-rounder",
+    "rating": 92,
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox",
+    "price": 115000
+  },
+  {
+    "id": 4,
+    "player": "Ben Stokes",
+    "image": "https://example.com/ben-stokes.jpg",
+    "country": "England",
+    "type": "All-rounder",
+    "rating": 94,
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast-medium",
+    "price": 125000
+  },
+  {
+    "id": 5,
+    "player": "Kane Williamson",
+    "image": "https://example.com/williamson.jpg",
+    "country": "New Zealand",
+    "type": "Batsman",
+    "rating": 91,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "price": 105000
+  },
+  {
+    "id": 6,
+    "player": "Steve Smith",
+    "image": "https://example.com/steve-smith.jpg",
+    "country": "Australia",
+    "type": "Batsman",
+    "rating": 94,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak",
+    "price": 118000
+  },
+  {
+    "id": 7,
+    "player": "David Warner",
+    "image": "https://example.com/warner.jpg",
+    "country": "Australia",
+    "type": "Batsman",
+    "rating": 90,
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak",
+    "price": 100000
+  },
+  {
+    "id": 8,
+    "player": "Jos Buttler",
+    "image": "https://example.com/buttler.jpg",
+    "country": "England",
+    "type": "Wicketkeeper",
+    "rating": 92,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "price": 108000
+  }
+]
