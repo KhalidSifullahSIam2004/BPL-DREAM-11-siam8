@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import banner from '../../assets/banner-main.png'
+import { toast } from 'react-toastify';
 
 
 const Banner = ({coin, setCoin}) => {
@@ -7,7 +8,9 @@ const Banner = ({coin, setCoin}) => {
   const [disable, setDisable] = useState(false);
   
   const handleDisable = () => {
-    setCoin(coin + 1000);
+    setCoin(coin + 1000)
+     toast('100 coin added successfully',  {
+    position: "top-center"});
     setDisable(true);
   }
   return (
