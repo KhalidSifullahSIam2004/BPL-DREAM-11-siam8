@@ -24,7 +24,7 @@ const AvailablePlayers = ({playerData, coin, setCoin, setSelectedPlayers}) => {
     <img
       src={image}
       alt={player}
-      className='h-64 w-full object-cover transition duration-300 hover:scale-105'
+      className='h-64 w-full object-contain transition duration-300 hover:scale-105'
     />
   </figure>
   <div className="card-body">
