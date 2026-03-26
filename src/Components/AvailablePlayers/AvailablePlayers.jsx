@@ -1,22 +1,24 @@
 import { FaFlag, FaUserCircle } from "react-icons/fa";
-import React, { useState } from 'react'
+import React from 'react'
 import { toast } from "react-toastify";
 
-const AvailablePlayers = ({playerData, coin, setCoin, setSelectedPlayers}) => {
+const AvailablePlayers = ({playerData, coin, setCoin, selectedPlayers, setSelectedPlayers}) => {
     const {player, image, country, type, rating, battingStyle, bowlingStyle, price} = playerData;
-
-    const [isSelected, setIsSelected] = useState(false);
+    const isPlayerSelected = selectedPlayers.find(item => item.id === playerData.id);
 
     const handleSelected = () => {
         if(coin < price){
             toast.error('Not enough coin to purchase this player');
             return;
         }
-        
-        setIsSelected(true);
+        if(isPlayerSelected){
+          toast.warning('Player is already selected');
+          return;
+        }
+
         setCoin(coin - price);
+        setSelectedPlayers(prev => [...prev, playerData]);
         toast.success(`${player} is selected`);
-        setSelectedPlayers(prev => [...prev, playerData])
     }
   return (
 <div className="card bg-base-100 shadow-2xl">
@@ -51,7 +53,7 @@ const AvailablePlayers = ({playerData, coin, setCoin, setSelectedPlayers}) => {
 
     <div className="card-actions justify-center items-center">
         <p className='font-semibold'>Price: $ {price}</p>
-      <button className='btn' disabled={isSelected} onClick={handleSelected}>{isSelected ? 'Selected' :'Choose Player'}</button>
+      <button className='btn' disabled={isPlayerSelected} onClick={handleSelected}>{isPlayerSelected ? 'Selected' :'Choose Player'}</button>
     </div>
   </div>
 </div>
