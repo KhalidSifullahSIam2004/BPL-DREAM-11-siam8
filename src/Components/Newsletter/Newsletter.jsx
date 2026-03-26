@@ -23,7 +23,7 @@ const Newsletter = () => {
 
          
           <form 
-            className='md:flex w-full max-w-md flex-col sm:flex-row'
+            className='md:flex w-full max-w-md flex-col sm:flex-row space-y-3 md:space-y'
             onSubmit={handleSubmit}
           >
             <input
