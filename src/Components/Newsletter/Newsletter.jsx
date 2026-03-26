@@ -7,9 +7,9 @@ const Newsletter = () => {
 
   return (
     <section className='w-8/12 mx-auto bg-transparent py-12 px-10  my-20  border  border-gray-100 rounded-2xl relative z-2' style={{ position: 'relative', zIndex: 2, marginBottom: '-220px' }}>
-      <div className='w-full'>
+      <div className='w-full  bg-linear-to-r from-blue-100 to-amber-50 rounded-2xl'>
         
-        <div className='flex flex-col items-center text-center gap-8 rounded-4xl bg-white p-10 shadow-[0_20px_60px_rgba(15,23,42,0.15)]'>
+        <div className='flex flex-col items-center text-center gap-8 rounded-4xl p-10 shadow-[0_20px_60px_rgba(15,23,42,0.15)]'>
           
       
           <div className='space-y-3 max-w-2xl'>
