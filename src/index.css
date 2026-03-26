@@ -5,3 +5,15 @@
 *{
     font-family: "Sora", sans-serif;
 }
+
+:root {
+    --primary-text-color: #131313b2;
+}
+
+body {
+    color: var(--primary-text-color);
+}
+
+.lucide {
+    color: inherit;
+}

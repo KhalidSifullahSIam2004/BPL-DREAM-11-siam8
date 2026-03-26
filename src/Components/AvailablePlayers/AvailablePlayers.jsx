@@ -1,33 +1,38 @@
-import { CircleUser, Flag } from 'lucide-react'
+import { FaFlag, FaUserCircle } from "react-icons/fa";
 import React, { useState } from 'react'
+import { toast } from "react-toastify";
 
-const AvailablePlayers = ({playerData, coin, setCoin}) => {
+const AvailablePlayers = ({playerData, coin, setCoin, setSelectedPlayers}) => {
     const {player, image, country, type, rating, battingStyle, bowlingStyle, price} = playerData;
 
     const [isSelected, setIsSelected] = useState(false);
 
     const handleSelected = () => {
         if(coin < price){
-            alert('Insufficient balance');
+            toast.error('Not enough coin to purchase this player');
             return;
         }
         
         setIsSelected(true);
         setCoin(coin - price);
-        alert(`${player} is selected`);
+        toast.success(`${player} is selected`);
+        setSelectedPlayers(prev => [...prev, playerData])
     }
   return (
 <div className="card bg-base-100 shadow-2xl">
-  <figure>
+  <figure className='overflow-hidden rounded-t-2xl'>
     <img
-      src={image} width={`300px`} height={`300px`}/>
+      src={image}
+      alt={player}
+      className='h-64 w-full object-cover transition duration-300 hover:scale-105'
+    />
   </figure>
   <div className="card-body">
-    <h2 className="card-title"><CircleUser></CircleUser>{player}</h2>
+    <h2 className="card-title"><FaUserCircle />{player}</h2>
     <div className='flex justify-between items-center'>
 
     <div className='flex gap-2 items-center'>
-        <Flag />
+        <FaFlag /> 
         <h3>{country}</h3>
     </div>
         <button className='btn btn-ghost'>{type}</button>
