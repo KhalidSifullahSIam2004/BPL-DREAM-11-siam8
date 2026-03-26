@@ -11,7 +11,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className='relative mt-16 bg-[#030415] text-white' style={{ position: 'relative', zIndex: 0 }}>
+    <footer className='relative mt-16 bg-[#030415] text-white' style={{ position: 'relative' }}>
       <div className='flex justify-center'>
           <img src={logoFooter} alt='Dream 11 logo' className='mt-48'/>
       </div>

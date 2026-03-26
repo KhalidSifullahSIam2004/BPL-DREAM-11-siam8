@@ -6,7 +6,7 @@ const Newsletter = () => {
   }
 
   return (
-    <section className='w-8/12 mx-auto bg-transparent py-12 px-10  my-20  border  border-gray-100 rounded-2xl' style={{ position: 'relative', zIndex: 2, marginBottom: '-220px' }}>
+    <section className='w-8/12 mx-auto bg-transparent py-12 px-10  my-20  border  border-gray-100 rounded-2xl relative z-2' style={{ position: 'relative', zIndex: 2, marginBottom: '-220px' }}>
       <div className='w-full'>
         
         <div className='flex flex-col items-center text-center gap-8 rounded-4xl bg-white p-10 shadow-[0_20px_60px_rgba(15,23,42,0.15)]'>
@@ -23,7 +23,7 @@ const Newsletter = () => {
 
          
           <form 
-            className='flex w-full max-w-md flex-col sm:flex-row'
+            className='md:flex w-full max-w-md flex-col sm:flex-row'
             onSubmit={handleSubmit}
           >
             <input
