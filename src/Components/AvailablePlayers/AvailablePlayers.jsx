@@ -4,16 +4,13 @@ import { toast } from "react-toastify";
 
 const AvailablePlayers = ({playerData, coin, setCoin, selectedPlayers, setSelectedPlayers}) => {
     const {player, image, country, type, rating, battingStyle, bowlingStyle, price} = playerData;
-    const isPlayerSelected = selectedPlayers.find(item => item.id === playerData.id);
+    
+    const isExist = selectedPlayers.find(selectedPlayer => selectedPlayer.id === playerData.id);
 
     const handleSelected = () => {
         if(coin < price){
             toast.error('Not enough coin to purchase this player');
             return;
-        }
-        if(isPlayerSelected){
-          toast.warning('Player is already selected');
-          return;
         }
 
         setCoin(coin - price);
@@ -53,7 +50,7 @@ const AvailablePlayers = ({playerData, coin, setCoin, selectedPlayers, setSelect
 
     <div className="card-actions justify-center items-center">
         <p className='font-semibold'>Price: $ {price}</p>
-      <button className='btn' disabled={isPlayerSelected} onClick={handleSelected}>{isPlayerSelected ? 'Selected' :'Choose Player'}</button>
+      <button className='btn' disabled={isExist} onClick={handleSelected}>{isExist ? 'Selected' :'Choose Player'}</button>
     </div>
   </div>
 </div>
