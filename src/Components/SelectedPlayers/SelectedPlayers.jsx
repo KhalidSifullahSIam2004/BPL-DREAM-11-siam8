@@ -1,11 +1,13 @@
 import React from 'react'
 import { FaUser } from 'react-icons/fa'
 import { MdDelete } from 'react-icons/md'
+import { toast } from 'react-toastify'
 
 const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, coin, setCoin }) => {
   const handleDeleteSelectedPlayer = (selectedPlayer) => {
-    setSelectedPlayers(selectedPlayers.filter((player) => player.id !== selectedPlayer.id))
-    setCoin(coin + selectedPlayer.price)
+    setSelectedPlayers(selectedPlayers.filter((player) => player.id !== selectedPlayer.id));
+    toast(`You have successfully removed ${selectedPlayer.player}` );
+    setCoin(coin + selectedPlayer.price);
   }
 
   if (!selectedPlayers.length) {
