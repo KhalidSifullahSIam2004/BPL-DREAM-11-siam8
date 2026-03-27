@@ -14,7 +14,7 @@ const AvailablePlayers = ({playerData, coin, setCoin, selectedPlayers, setSelect
         }
 
         setCoin(coin - price);
-        setSelectedPlayers(prev => [...prev, playerData]);
+        setSelectedPlayers([...selectedPlayers, playerData]);
         toast.success(`${player} is selected`);
     }
   return (
