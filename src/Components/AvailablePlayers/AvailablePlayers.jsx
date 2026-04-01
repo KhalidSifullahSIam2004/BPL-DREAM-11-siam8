@@ -3,7 +3,10 @@ import React from 'react'
 import { toast } from "react-toastify";
 
 const AvailablePlayers = ({playerData, coin, setCoin, selectedPlayers, setSelectedPlayers}) => {
+
     const {player, image, country, type, rating, battingStyle, bowlingStyle, price} = playerData;
+    
+
     
     const isExist = selectedPlayers.find(selectedPlayer => selectedPlayer.id === playerData.id);
 

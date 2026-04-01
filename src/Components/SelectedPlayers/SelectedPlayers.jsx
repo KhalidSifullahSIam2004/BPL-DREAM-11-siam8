@@ -4,6 +4,7 @@ import { MdDelete } from 'react-icons/md'
 import { toast } from 'react-toastify'
 
 const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, coin, setCoin }) => {
+  
   const handleDeleteSelectedPlayer = (selectedPlayer) => {
     setSelectedPlayers(selectedPlayers.filter((player) => player.id !== selectedPlayer.id));
     toast(`You have successfully removed ${selectedPlayer.player}` );

@@ -22,6 +22,7 @@ const Players = ({playersPromise, coin, setCoin}) => {
 
         <div className='flex justify-between items-center'>
           <button onClick={() => setIsSelected(111)} className={`btn ${isSelected===111 ? 'bg-[#e7fe29FF]' : 'bg-gray-50'} rounded-r-none rounded-l-xl`}>Available</button>
+          
           <button onClick={() => setIsSelected(222)} className={`btn ${isSelected===222 ? 'bg-[#e7fe29FF]' : 'bg-gray-50'}  rounded-r-xl rounded-l-none`}>Selected ({selectedPlayers.length})</button>
         </div>
       </div>
@@ -42,7 +43,12 @@ const Players = ({playersPromise, coin, setCoin}) => {
           ))
         ) : (
           <div className='col-span-full w-full'>
-            <SelectedPlayers coin={coin} setCoin={setCoin} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}/>
+            <SelectedPlayers
+             coin={coin}
+             setCoin={setCoin}
+             selectedPlayers={selectedPlayers}
+             setSelectedPlayers={setSelectedPlayers}
+          />
           </div>
         )
       }
